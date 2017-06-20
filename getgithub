@@ -8,6 +8,12 @@ curl "https://codeload.github.com/${GH_USER}/${GH_REPO}/zip/master" > ${GH_REPO}
 unzip ${GH_REPO}.zip 
 cd ${GH_REPO}-master/
 
+make install
+
+cd ..
+rm -rf ${GH_REPO}-master ${GH_REPO}.zip 
+
+
 # Update info
 mkdir -p /etc/cloudy
 mkdir -p /etc/cloudy/docker-compose
